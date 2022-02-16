@@ -1,0 +1,36 @@
+
+
+
+
+section {
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#button {
+    width: 25%;
+    font-size: 30px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    border: 0;
+    background-color: blue;
+    border-radius: 5%;
+    cursor: pointer;
+    
+}
+
+#button:hover {
+    background-color: #150075
+}
+
+#square {
+
+    background-color: rgb(0, 229, 255);
+    height: 200px;
+    width: 200px;
+    border-radius: 5%;
+}
