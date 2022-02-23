@@ -1,8 +1,4 @@
 
-
-
-
-
 $(document).ready(function () {
 
     let animated = false;
@@ -16,13 +12,10 @@ $(document).ready(function () {
                     marginLeft: '0px',
                     height: '200px',
                     width: '200px',
-                    backgroundColor: "#aa0000",
+                    backgroundColor: 'blue'
                 },
 
-                {
-                    duration: 1000,
-                }
-
+                { duration: 3000 }
             );
 
             animated = false;
@@ -36,16 +29,26 @@ $(document).ready(function () {
                     marginLeft: calc + "px",
                     height: '100px',
                     width: '100px',
-                    backgroundColor: "#aa0000"
+                    // backgroundColor: 'blue'
                 },
 
-                {
-                    duration: 1000,
-                }
-
+                { duration: 3000 },
             );
             animated = true;
+
+            setTimeout(function () {
+                $('#square').animate(
+                    { 
+                        backgroundColor: 'blue',
+                        color: 'red'
+                    });
+            }, 5000); 
+
         }
+
+
+
+
 
     });
 })
