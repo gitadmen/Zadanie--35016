@@ -1,7 +1,6 @@
 
 $(document).ready(function () {
 
-    let animated = false;
 
     $("#button").click(function () {
 
@@ -13,21 +12,18 @@ $(document).ready(function () {
                 marginLeft: calc + "px",
                 height: '100px',
                 width: '100px',
-                // backgroundColor: 'blue'
-            },
+                
+            }, 3000, function () {
+                $('#square').animate(
+                    {
+                        backgroundColor: 'blue',
+                        color: 'red'
+                    }, 5000, function (){
+                        $(this).html('<h2> Koniec </h2>')
+                    });
 
-            { duration: 3000 },
+            }
         );
-        animated = true;
-
-        setTimeout(function () {
-            $('#square').animate(
-                {
-                    backgroundColor: 'blue',
-                    color: 'red'
-                });
-        }, 5000);
-
 
     });
 })
